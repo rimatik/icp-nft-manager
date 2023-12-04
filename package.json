@@ -1,0 +1,23 @@
+{
+  "name": "nft_manager",
+  "main": "index.js",
+  "dependencies": {
+    "@dfinity/agent": "^0.19.2",
+    "@dfinity/candid": "^0.19.2",
+    "azle": "^0.18.6",
+    "uuid": "^9.0.0"
+  },
+  "engines": {
+    "node": "^12 || ^14 || ^16 || ^18"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.1"
+  },
+  "description": "This project is a canister that leverages the Internet Computer Protocol (ICP) and the Azle framework. It is designed to interact with the CoinGecko API for fetching real-time nft prices and enables users to manage a watchlist of their favorite nfts.",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
