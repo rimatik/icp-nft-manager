@@ -44,7 +44,7 @@ const userFavoritesStorage = StableBTreeMap(Principal, UserFavorites, 1);
  * - getFavoriteNfts: retrieves the list of favorite nfts for the current user.
  */
 export default Canister({
-  getCoinPrice: update([text], Result(text, text), async (nftId) => {
+    getCoinPrice: update([text], Result(text, text), async (nftId) => {
     const nft = nftId.toLowerCase();
 
     const response = await ic.call(managementCanister.http_request, {
@@ -72,12 +72,12 @@ export default Canister({
 
     var body = JSON.parse(new TextDecoder().decode(response.body));
 
-    if (!body[nft]) {
+    if (!body["floor_price"]) {
       return Err("Nft not found");
     }
 
-    const price = body[nft].usd;
-    return Ok(`The price of ${nft} is $${price}`);
+    const price = body["floor_price"]["usd"];
+    return Ok(`The price of ${nft} is $ ${price}`);
   }),
 
   saveFavoriteNft: update([Nft], Result(text, text), (nft) => {
