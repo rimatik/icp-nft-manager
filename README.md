@@ -77,7 +77,7 @@ Use cases can be done through the **Candid interface** or using the command line
 ## Get coin price by calling CoinGecko API
 
 ```bash
-dfx canister call nft_manager getNftPrice '(1)'
+dfx canister call nft_manager getNftPrice '(squiggly)'
 ```
 
 You will get a message (will be different because of the nft price):
@@ -113,7 +113,7 @@ You will get a message:
 ## Remove coin from favorites
 
 ```bash
-dfx canister call nft_manager removeFavoriteNft '(1)'
+dfx canister call nft_manager removeFavoriteNft '(squiggly)'
 ```
 
 You will get a message:
