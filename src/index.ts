@@ -38,13 +38,13 @@ const userFavoritesStorage = StableBTreeMap(Principal, UserFavorites, 1);
 
 /**
  * Defines a Canister object with three methods:
- * - getNft: get current data (name, price_floor, volume_24h ...) for an NFT collection using the CoinGecko API.
+ * - getNftPrice: get current data (name, price_floor, volume_24h ...) for an NFT collection using the CoinGecko API.
  * - saveFavoriteNft: saves a given Nft as a favorite for the current user.
  * - removeFavoriteNft: removes Nft as a favorite for the current user.
  * - getFavoriteNfts: retrieves the list of favorite nfts for the current user.
  */
 export default Canister({
-    getCoinPrice: update([text], Result(text, text), async (nftId) => {
+  getNftPrice: update([text], Result(text, text), async (nftId) => {
     const nft = nftId.toLowerCase();
 
     const response = await ic.call(managementCanister.http_request, {
