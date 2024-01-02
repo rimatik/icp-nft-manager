@@ -74,7 +74,7 @@ dfx stop
 
 Use cases can be done through the **Candid interface** or using the command line with the commands below.
 
-## Get coin price by calling CoinGecko API
+## Get coin price
 
 ```bash
 dfx canister call nft_manager getNftPrice '(squiggly)'
